@@ -27,3 +27,14 @@ OK
 get a
 "1"
 ```
+
+## Name conventions
+```
+set user:1:name sam
+OK
+set user:2:name jon
+OK
+get user:1:name sam
+"sam"
+```
+
