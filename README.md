@@ -1,4 +1,4 @@
-### Redis
+## Redis
 
 ```
 docker-compose up
@@ -6,7 +6,7 @@ docker exec -it redis bash
 redis-cli
 ```
 
-## Redis: Key-Value
+### Redis: Key-Value
 * Key values are always "strings"
 ```
 ping
@@ -28,7 +28,7 @@ get a
 "1"
 ```
 
-## Name conventions
+### Name conventions
 ```
 set user:1:name sam
 OK
@@ -38,3 +38,7 @@ get user:1:name sam
 "sam"
 ```
 
+### Space
+```
+set somekey "some key"
+```
