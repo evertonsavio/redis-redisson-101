@@ -1,0 +1,21 @@
+# Expiring Keys
+
+```
+keys *
+set a b ex 10
+
+get a
+"b"
+
+ttl a
+2
+
+after 10 seconds
+get a
+(nil)
+```
+
+### Extend 0 seconds
+```
+expire a 60
+```
