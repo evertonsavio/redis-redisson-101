@@ -42,3 +42,14 @@ get user:1:name sam
 ```
 set somekey "some key"
 ```
+
+### Set if exists   
+```
+set a b xx
+(nil)
+```
+### Set if not exists   
+```
+set a b nx
+OK
+```
