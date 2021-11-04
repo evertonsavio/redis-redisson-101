@@ -43,3 +43,9 @@ hexists user:1 status
 hexists user:1 status
 (integer) 1
 ```
+
+### Remove hash
+```
+hdel user:1 age
+del user:1
+```
