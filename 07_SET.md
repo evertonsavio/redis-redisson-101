@@ -15,3 +15,19 @@ smembers users
 "2"  
 "3"  
 ```  
+
+### Redis remove set  
+```
+sismember users 5
+srem users 5
+(integer) 1
+
+srem users 5
+(integer) 0
+```
+
+### Random remove
+```
+spop users
+"3"
+```
