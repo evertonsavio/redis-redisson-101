@@ -33,4 +33,6 @@ lrange users 0 -1
 "mike"
 "jake"
 
+lpop users 2
+
 ```
