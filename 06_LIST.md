@@ -36,3 +36,11 @@ lrange users 0 -1
 lpop users 2
 
 ```
+
+### List as Stack
+```
+rpush users 1 2 3 4 5 6
+rpop users
+lrange users 0 -1
+keys *
+```
