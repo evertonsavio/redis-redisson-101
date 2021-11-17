@@ -58,3 +58,67 @@ keys *
 "skill:aws"
 
 ```   
+
+## Sorted Set
+```
+flushdb
+
+zadd products 0 books
+zadd products 0 iphone 0 tv
+zcard products
+
+zincrby products 1 books
+"1"
+zincrby products 1 iphone
+"1"
+zincrby products 1 iphone
+"2"
+zincrby products 1 tv
+"1"
+
+zrange products 0 -1
+"books"
+"tv"
+"iphone"
+
+zincrby products 1 iphone
+"3"
+zincrby products 1 books
+"2"
+
+zrange products 0 -1
+"tv"
+"books"
+"iphone"
+
+zrange products 0 -1 withscores
+"tv"
+"1"
+"books"
+"2"
+"iphone"
+"3"
+
+zrange products -1 -1
+"iphone"
+zrange products 0 0 rev
+"iphone"
+zrange products 0 0 rev withscores
+"iphone"
+"3"
+zrange products 0 1 rev withscores
+
+zrank products books
+(integer) 1
+zrank products iphone
+(integer) 2
+
+zscore products iphone
+"3"
+
+zpopmax products
+"iphone"
+"3"
+
+zcard products
+```
