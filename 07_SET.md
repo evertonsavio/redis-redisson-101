@@ -31,3 +31,30 @@ srem users 5
 spop users
 "3"
 ```
+   
+### Intersection & Union  
+```   
+sadd skill:java 1 2 3 4
+sadd skill:javaScript 2 3 4
+sadd skill:aws 4 5 6
+
+# Intersection  
+sinter skill:java skill:javaScript skill:aws
+"4"
+
+# sunion skill:java skill:javaScript
+"1"
+"2"
+"3"
+"4"
+
+# sdiff skill:java skill:aws
+
+# sinterstore java-js skill:java skill:javaScript
+keys *
+"java-js"
+"skill:java"
+"skill:javaScript"
+"skill:aws"
+
+```   
