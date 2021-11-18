@@ -53,3 +53,14 @@ set a b xx
 set a b nx
 OK
 ```
+
+## Save State on Files
+```
+set user:1:balance 1
+OK
+set user:2:balance 0
+OK
+
+bgsave
+Background saving started
+```
