@@ -32,4 +32,7 @@ QUEUED
 exec
 (integer) 0
 (integer) 1
+
+# Discart transaction
+discart
 ```
