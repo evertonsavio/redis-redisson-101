@@ -27,8 +27,7 @@ public class Lec01KeyValueTest extends BaseTest{
     @Test
     public void keyValueExpireTest(){
         RBucketReactive<String> bucket = this.client.getBucket("user:1:name", StringCodec.INSTANCE);
-        bucket.set("sam", 5L, TimeUnit.SECONDS);
-        Mono<Void> set = bucket.set("sam");
+        Mono<Void> set =  bucket.set("sam", 5L, TimeUnit.SECONDS);
         Mono<Void> get = bucket.get()
                 .doOnNext(System.out::println)
                 .then();
