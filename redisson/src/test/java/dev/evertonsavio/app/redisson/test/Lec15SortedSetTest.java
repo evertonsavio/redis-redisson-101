@@ -27,7 +27,8 @@ public class Lec15SortedSetTest extends BaseTest {
         StepVerifier.create(mono)
                 .verifyComplete();
 
-        sortedSet.entryRange(0, 1)
+        //sortedSet.entryRangeReversed()
+        sortedSet.entryRange(0, 2)
                 .flatMapIterable(Function.identity()) // flux
                 .map(se -> se.getScore() + " : " + se.getValue())
                 .doOnNext(System.out::println)
