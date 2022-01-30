@@ -6,6 +6,8 @@ import org.redisson.client.codec.StringCodec;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.util.Map;
+
 public class Lec06KeyMapTest extends BaseTest{
 
     @Test
@@ -22,6 +24,21 @@ public class Lec06KeyMapTest extends BaseTest{
         //keys *
         // hgetall user:1
         // hget user:1 age
+
+    }
+
+    @Test
+    public void mapTest2(){
+
+        RMapReactive<Object, Object> map = this.client.getMap("user:2", StringCodec.INSTANCE);
+        Map<String, String> javaMap = Map.of(
+                "name", "jake",
+                "age", "30",
+                "city", "miami"
+        );
+
+        StepVerifier.create(map.putAll(javaMap).then())
+                .verifyComplete();
 
     }
 
