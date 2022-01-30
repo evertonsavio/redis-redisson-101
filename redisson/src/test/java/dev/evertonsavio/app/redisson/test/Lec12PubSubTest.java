@@ -9,6 +9,8 @@ import org.redisson.client.codec.StringCodec;
 
 public class Lec12PubSubTest extends BaseTest {
 
+    //publish slack-room1 hi
+
     @Test
     public void subscriber1(){
         RTopicReactive topic = this.client.getTopic("slack-room1", StringCodec.INSTANCE);
