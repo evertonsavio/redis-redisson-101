@@ -22,6 +22,8 @@ public class Lec01KeyValueTest extends BaseTest{
         StepVerifier.create(set.concatWith(get))
                 .verifyComplete();
 
+        //keys *
+        //get user:1:name
     }
 
     @Test
