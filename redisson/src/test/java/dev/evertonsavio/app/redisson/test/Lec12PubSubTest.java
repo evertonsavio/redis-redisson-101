@@ -33,5 +33,9 @@ public class Lec12PubSubTest extends BaseTest {
         sleep(600_000);
     }
 
-
+    @Test
+    public void publisher(){
+        RTopicReactive topic = this.client.getTopic("slack-room1", StringCodec.INSTANCE);
+        topic.publish("ok ok ok").subscribe();
+    }
 }
