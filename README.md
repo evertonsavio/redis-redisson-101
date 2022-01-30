@@ -1,5 +1,6 @@
 ## Redis
 
+![](./redisson/redis.png)
 ```
 docker-compose up
 docker exec -it redis bash
