@@ -51,4 +51,14 @@ public class Student implements Serializable {
     public void setMarks(List<Integer> marks) {
         this.marks = marks;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                ", marks=" + marks +
+                '}';
+    }
 }
